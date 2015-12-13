@@ -30,7 +30,7 @@
       }
     },
     "start-dev-web-server": {
-      "command": "nodemon -e js,jsx,json --ignore ./server/views --delay 2.5 bin/www",
+      "command": "nodemon -e js,jsx,json --ignore ./sites --delay 2.5 bin/www",
       "env": {
         "NODE_ENV": "development"
       }
@@ -78,7 +78,9 @@
     "express": "^4.13.3",
     "express-handlebars": "^2.0.1",
     "fs-promise": "^0.3.1",
+    "lgutil": "^0.4.4",
     "lodash": "^3.10.1",
+    "normalize.css": "^3.0.3",
     "walk": "^2.3.9"
   },
   "engines": {

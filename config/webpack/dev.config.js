@@ -47,11 +47,15 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.css/,
+        test: /\.css$/,
         loader: 'style!css?importLoaders=1&sourceMap!autoprefixer?browsers=last 2 versions',
-        exclude: /node_modules/
+        // exclude: /node_modules/
       },
       // #TODO:0 为其他类型文件添加loader，比如字体文件，或者图片等 +webpack @dev
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url?limit=25000'
+      },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: "url-loader?limit=10000&mimetype=application/font-woff"

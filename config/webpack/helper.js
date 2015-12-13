@@ -20,6 +20,8 @@ export const parseEntry = _ => {
       directories (root, stats) {
         if (root === entriesDirectory) {
           stats.forEach(({ name }) => {
+            // 忽略以下划线开头的文件夹
+            if (name[0] === '_') return
             // 如果存在index.js，则把它作为entry
             const entry = fp.join(entriesDirectory, name, 'index.js')
             if (fsp.existsSync(entry)) entries[name] = entry

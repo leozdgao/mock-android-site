@@ -11,9 +11,12 @@ app.engine('hbs', hbsEngine)
 app.set('view engine', 'hbs')
 app.set('views', env.entriesDirectory)
 
+// 设置一些views用的默认值
+app.locals.title = 'Android'
+
 // 建议将静态文件发布到CDN，或通过nginx来host
 // 如果不需要node来host静态文件，直接删除这个部分
-// app.use('/assets', express.static(path_of_assets)
+app.use('/assets', express.static(fp.join(__dirname, '../assets')))
 
 // #DONE:0 为server端代码添加webpack dev的中间件 +server
 // 开发模式下，添加webpack的hmr中间件

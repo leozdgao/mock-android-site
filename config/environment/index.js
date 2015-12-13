@@ -16,7 +16,7 @@ export const __IS_PROD__ = node_env === 'production'
 const config = {
   port: 3000,
   publicPath: fp.join(__dirname, '../../dist'),
-  entriesDirectory: fp.join(__dirname, '../../server/views')
+  entriesDirectory: fp.join(__dirname, '../../sites')
 }
 
 export default config

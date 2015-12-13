@@ -1,0 +1,97 @@
+@navbarHeight: 80px;
+
+body {
+  @media (min-width: 850px) {
+    padding-top: @navbarHeight;
+  }
+}
+
+.navbar, .navbar-header {
+  .clearfix
+}
+
+.navbar {
+  background: #fff;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: box-shadow 0.25s cubic-bezier(1, 0, 0, 1);
+  width: 100%;
+  z-index: 11;
+}
+
+.navbar-header {
+  float: left;
+}
+
+.navbar-brand {
+  @media (min-width: 850px) {
+    float: left;
+    width: 164px;
+    height: @navbarHeight;
+    padding: 26px 0;
+    padding-left: 24px;
+  }
+}
+
+.navbar-toggle {
+  display: inline-block;
+
+  @media (min-width: 850px) {
+    display: none;
+  }
+}
+
+.navbar-nav {
+  float: right;
+  margin: 0;
+  margin-right: 40px;
+  padding: 0;
+  list-style: none;
+
+  >li {
+    float: left;
+
+    .nav {
+      color: #757575;
+      cursor: pointer;
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      line-height: 18px;
+      padding: 16px;
+      position: relative;
+      white-space: nowrap;
+
+      &:hover {
+        // border-bottom-color: @mainColor;
+        color: @mainColor;
+      }
+
+      @media (min-width: 850px) {
+        display: block;
+        height: 80px;
+        padding-bottom: 32px;
+        padding-top: 32px;
+      }
+    }
+  }
+
+  .icon {
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .icon-caret {
+    .caret(down; 5px);
+
+    margin-left: 4px;
+    margin-top: -3px;
+    opacity: .9;
+  }
+}
+
+.dropdown-menu {
+  list-style: none;
+}
