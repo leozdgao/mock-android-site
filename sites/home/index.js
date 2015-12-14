@@ -1,2 +1,14 @@
 require('../_styles/main.less')
-require('../_components/navbar')
+
+import { curriedAddClass } from '../_utils/utils'
+
+document.addEventListener('DOMContentLoaded', _ => {
+  require('../_components/navbar') // init navbar here
+
+  setTimeout(_ => {
+    const bannerImage = document.querySelector('.banner-image')
+    if (bannerImage) {
+      curriedAddClass('show')(bannerImage)
+    }
+  }, 500)
+})
