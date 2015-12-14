@@ -15,6 +15,7 @@ export const __IS_PROD__ = node_env === 'production'
 
 const config = {
   port: 3000,
+  // host: `http://localhost:${this.port}`,
   publicPath: fp.join(__dirname, '../../dist'),
   entriesDirectory: fp.join(__dirname, '../../sites')
 }

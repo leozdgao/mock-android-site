@@ -1,21 +1,25 @@
 .caret(up; @width) {
   border-left: @width solid transparent;
   border-right: @width solid transparent;
+  border-top: @width solid transparent;
   border-bottom: @width solid;
 }
 .caret(down; @width) {
   border-left: @width solid transparent;
   border-right: @width solid transparent;
+  border-bottom: @width solid transparent;
   border-top: @width solid;
 }
 .caret(left; @width) {
   border-bottom: @width solid transparent;
   border-top: @width solid transparent;
+  border-left: @width solid transparent;
   border-right: @width solid;
 }
 .caret(right; @width) {
   border-bottom: @width solid transparent;
   border-top: @width solid transparent;
+  border-right: @width solid transparent;
   border-left: @width solid;
 }
 .caret(@_; @width) {

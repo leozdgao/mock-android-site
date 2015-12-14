@@ -13,6 +13,7 @@ app.set('views', env.entriesDirectory)
 
 // 设置一些views用的默认值
 app.locals.title = 'Android'
+// app.locals.host = env.host
 
 // 建议将静态文件发布到CDN，或通过nginx来host
 // 如果不需要node来host静态文件，直接删除这个部分

@@ -17,5 +17,9 @@ module.exports = exphbs.create({
     //
     //   return ret
     // }
+  },
+  _renderTemplate (template, context, options) {
+    // 对输出的html进行一些处理，html-minify maybe
+    return template(context, options)
   }
 })
