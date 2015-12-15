@@ -79,7 +79,7 @@
     "express": "^4.13.3",
     "express-handlebars": "^2.0.1",
     "fs-promise": "^0.3.1",
-    "lgutil": "^0.4.4",
+    "lgutil": "^0.4.5",
     "lodash": "^3.10.1",
     "normalize.css": "^3.0.3",
     "walk": "^2.3.9"
