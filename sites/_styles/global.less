@@ -14,8 +14,12 @@ html, body {
   text-rendering: optimizelegibility;
 }
 a {
-  color: @fontColor;
+  color: @mainColor;
   text-decoration: none;
+
+  &:hover {
+    color: @secondaryColor;
+  }
 }
 p {
   color: @fontColor;
@@ -41,4 +45,38 @@ p {
 
 .relative {
   position: relative !important;
+}
+
+.heading-2 {
+  color: @fontColor;
+  margin-bottom: 16px;
+  margin-top: 0;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 300;
+
+  @media (min-width: @smScreen) and (max-width: @mdScreen) {
+    font-size: 34px;
+  }
+
+  @media (max-width: @smScreen) {
+    font-size: 24px;
+  }
+}
+.heading-3 {
+  color: @fontColor;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 26px;
+}
+.optimal-readability {
+  @media (min-width: @mdScreen) {
+    max-width: 40em;
+    min-width: 20em;
+  }
+}
+
+img.block-img {
+  display: block;
+  width: 100%;
 }

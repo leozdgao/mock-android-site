@@ -1,0 +1,74 @@
+#aside-container {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 100;
+  transition: background-color .15s;
+  transform: translate3d(-9999px, 0, 0);
+
+  &.closing {
+    transform: translate3d(0, 0, 0);
+    // opacity: 0;
+    right: 0;
+    bottom: 0;
+
+    .aside-menu {
+      width: 0;
+    }
+  }
+
+  &.active {
+    transform: translate3d(0, 0, 0);
+    background-color: rgba(0, 0, 0, .7);
+    right: 0;
+    bottom: 0;
+    transition-duration: .3s;
+
+    .aside-menu {
+      width: 70%;
+      transition-duration: .3s;
+    }
+  }
+}
+
+.aside-menu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  overflow: auto;
+  background-color: #fff;
+  transition: width .15s;
+}
+
+.aside-header {
+  background-color: @mainColor;
+  padding: 100px 16px 20px;
+}
+
+.aside-nav {
+  margin: 11px 0;
+  padding: 0;
+  list-style: none;
+
+  .nav-item > a {
+    color: @navbarFontColor;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+    padding: 16px;
+    padding-bottom: 26px;
+    position: relative;
+    white-space: nowrap;
+
+    &:hover {
+      color: @mainColor;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 @import "dropdown";
 @import "sprite-nav";
+@import "aside";
 
 @navbarHeightMobile: 56px;
 @navbarHeight: 80px;
@@ -18,9 +19,9 @@ body {
 }
 
 .navbar {
+  position: fixed;
   background: #fff;
   left: 0;
-  position: fixed;
   top: 0;
   transition: box-shadow 0.25s cubic-bezier(1, 0, 0, 1);
   width: 100%;
@@ -160,5 +161,16 @@ body {
     margin-left: 4px;
     margin-top: 3px;
     opacity: .9;
+  }
+}
+
+.nav, .dropdown-menu {
+  list-style: none;
+
+  .divider {
+    background-color: #dcdcdc;
+    height: 1px;
+    margin: 11px 0;
+    overflow: hidden;
   }
 }

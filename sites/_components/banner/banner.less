@@ -1,12 +1,30 @@
+@bannerBkbColor: #e3e3e3;
+@bannerBlockColor: #455a64;
+
 .banner {
-  // position: relative;
+  background-color: @bannerBkbColor;
+
+  .text-button {
+    color: #64ffda;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 16px;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    &:hover {
+      color: #00bfa5;
+    }
+  }
 }
 
 .banner-image {
   display: block;
   position: relative;
-  background-image: url("http://localhost:3000/assets/images/version-1024.jpg");
-  background-color: #e3e3e3;
+  background-color: @bannerBkbColor;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -40,14 +58,6 @@
 
   .text-button {
     color: @mainColor;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    line-height: 16px;
-    text-transform: uppercase;
-    white-space: nowrap;
 
     &:hover {
       color: #333;
@@ -60,12 +70,6 @@
 }
 
 .banner-header {
-  margin-bottom: 16px;
-  margin-top: 0;
-
-  color: @fontColor;
-  font-size: 40px;
-  font-weight: 300;
   line-height: 38px;
 
   @media (min-width: @smScreen) and (max-width: @mdScreen) {
@@ -74,5 +78,14 @@
 
   @media (max-width: @smScreen) {
     font-size: 24px;
+  }
+}
+
+.banner-block {
+  background-color: @bannerBlockColor;
+  padding: 24px;
+
+  h2, p {
+    color: #fff;
   }
 }

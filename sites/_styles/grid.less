@@ -1,0 +1,40 @@
+.container {
+  .clearfix;
+  @media (min-width: @mdScreen) {
+    max-width: @mdScreen;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.row {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.column {
+  display: inline-block;
+  float: left;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.col-4 {
+  @media (min-width: @mdScreen) {
+    width: 25%;
+  }
+}
+.col-tablet-2 {
+  @media (min-width: @smScreen) and (max-width: @mdScreen) {
+    width: 50%;
+  }
+}
+
+.one-half {
+  width: 49.9%;
+}
+.col-mobile-1, .one-whole-mobile {
+  @media (max-width: @smScreen) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,36 @@
+.section-header {
+  padding-bottom: 12px;
+  padding-top: 45px;
+  text-align: center;
+  margin: auto;
+
+  p {
+    margin: auto;
+    margin-bottom: 1em;
+  }
+
+  @media (max-width: @smScreen) {
+    padding: 48px 16px 24px 16px;
+    text-align: left;
+  }
+  @media (min-width: @mdScreen) {
+    padding-bottom: 24px;
+    padding-top: 80px;
+  }
+}
+
+.section-customized {
+  overflow: hidden;
+
+  .block-img {
+    min-width: 960px;
+    transform: translateX(-50%);
+    margin-left: 50%;
+  }
+}
+
+.section-more {
+  .section-header {
+    text-align: left;
+  }
+}

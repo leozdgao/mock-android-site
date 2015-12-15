@@ -22,3 +22,21 @@ export function isDomNode (maybe) {
     typeof maybe.nodeName === 'string' &&
     typeof maybe.nodeType === 'number'
 }
+
+export function preloadBkgImage (src, cb) {
+  let image = document.createElement('img')
+  image.setAttribute('src', src)
+  image.onload = _ => {
+    cb.call()
+    image = null
+  }
+}
+
+export function fromArray (likeArr) {
+  if (typeof likeArr === 'string' ||
+    typeof likeArr === 'object' &&
+    typeof likeArr.length === 'number') {
+    return [].slice.call(likeArr)
+  }
+  else return []
+}
