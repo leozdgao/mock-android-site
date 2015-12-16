@@ -8,6 +8,7 @@ const bannerImages = fromArray(document.querySelectorAll('.banner-image'))
 bannerImages.forEach(bannerImage => {
   const bkgUrl = dataset(bannerImage, 'url')
   const needParallax = dataset(bannerImage, 'parallax')
+  
   if (bkgUrl) {
     preloadBkgImage(bkgUrl, _ => {
       style(bannerImage, {
@@ -18,7 +19,7 @@ bannerImages.forEach(bannerImage => {
       // 仅在大屏幕下使用视差滚动
       if (needParallax) {
         if (document.documentElement.clientWidth > 1050) {
-          parallax(0.1)(bannerImage)
+          parallax(0.4)(bannerImage)
           style(bannerImage, {
             "background-attachment": "fixed"
           })

@@ -1,0 +1,40 @@
+{
+  "cards": [
+    {
+      "title": "Get going on Android",
+      "desc": "Four tips to make your switch to Android quick and easy.",
+      "img": "/assets/images/more-from-1.png",
+      "link": {
+        "title": "Make the switch",
+        "href": "#"
+      }
+    },
+    {
+      "title": "Create your own Android character",
+      "desc": "Turn the little green Android mascot into you, your friends, anyone!",
+      "img": "/assets/images/more-from-4.png",
+      "link": {
+        "title": "Androidify.com",
+        "href": "#"
+      }
+    },
+    {
+      "title": "Get a clean, customisable home screen",
+      "desc": "A clean, simple, customisable home screen that comes with the power of Google Now: traffic alerts, weather and much more, just a swipe away.",
+      "img": "/assets/images/more-from-2.png",
+      "link": {
+        "title": "Download Now",
+        "href": "#"
+      }
+    },
+    {
+      "title": "Millions to choose from",
+      "desc": "Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.",
+      "img": "/assets/images/more-from-3.png",
+      "link": {
+        "title": "Find Apps",
+        "href": "#"
+      }
+    }
+  ]
+}

@@ -4,13 +4,14 @@ import { isDomNode, curriedAddClass,
   curriedRemoveClass, curriedToggleClass } from '../../_utils/utils'
 
 const navbarItemActiveClass = 'active'
+const asideClosingClass = 'closing'
 
-const addActiveClass = curriedAddClass('active')
-const removeActiveClass = curriedRemoveClass('active')
-const toggleActiveClass = curriedToggleClass('active')
+const addActiveClass = curriedAddClass(navbarItemActiveClass)
+const removeActiveClass = curriedRemoveClass(navbarItemActiveClass)
+const toggleActiveClass = curriedToggleClass(navbarItemActiveClass)
 
-const addClosingClass = curriedAddClass('closing')
-const removeClosingClass = curriedRemoveClass('closing')
+const addClosingClass = curriedAddClass(asideClosingClass)
+const removeClosingClass = curriedRemoveClass(asideClosingClass)
 
 function getNavbarItem (elem) {
   const result = []
@@ -79,11 +80,17 @@ function initAside () {
   }
 }
 
+let inited = false
+
 function init () {
-  // 大屏幕下navbar的交互
-  initNavbar()
-  // 小屏幕下的汉堡菜单交互
-  initAside()
+  if (!inited) {
+    // 大屏幕下navbar的交互
+    initNavbar()
+    // 小屏幕下的汉堡菜单交互
+    initAside()
+
+    inited = true
+  }
 }
 
 init()

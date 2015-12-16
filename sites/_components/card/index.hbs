@@ -1,11 +1,12 @@
-{{#card}}
-  <figure class="card">
+<figure class="card">
+  <div>
     <div class="card-img">
       <img src="{{img}}">
     </div>
     <figcaption class="card-footer">
       <h3 class="heading-3">{{title}}</h3>
-      
+      <p class="card-desc">{{desc}}</p>
+      <a class="text-button" href="{{link.href}}">{{link.title}}</a>
     </figcaption>
-  </figure>
-{{/card}}
+  </div>
+</figure>

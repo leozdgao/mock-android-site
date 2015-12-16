@@ -30,7 +30,7 @@
       }
     },
     "start-dev-web-server": {
-      "command": "nodemon -e js,jsx,json --ignore ./sites --delay 2.5 bin/www",
+      "command": "nodemon -e js,jsx,json -w ./server -w ./sites/_helpers --ignore ./sites --delay 2.5 bin/www",
       "env": {
         "NODE_ENV": "development"
       }

@@ -40,3 +40,9 @@ export function fromArray (likeArr) {
   }
   else return []
 }
+
+export function getElementHeight (elem) {
+  const rect = elem.getBoundingClientRect()
+  if (typeof rect.height === 'number') return rect.height
+  else return rect.bottom - rect.top
+}

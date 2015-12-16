@@ -1,19 +1,27 @@
 .container {
   .clearfix;
+
   @media (min-width: @mdScreen) {
     max-width: @mdScreen;
     margin-left: auto;
     margin-right: auto;
   }
+
+  @media (min-width: @smScreen) and (max-width: @mdScreen) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .row {
+  .clearfix;
   margin-left: -12px;
   margin-right: -12px;
 }
 
 .column {
   display: inline-block;
+  position: relative;
   float: left;
   padding-left: 12px;
   padding-right: 12px;

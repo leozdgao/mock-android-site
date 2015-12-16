@@ -4,6 +4,9 @@ import env, { __IS_PROD__ } from '../config/environment'
 import cgiHandler from './helper/cgiHandler'
 import { engine as hbsEngine } from './helper/hbsEngine'
 
+// 加入.hbs的扩展
+import handlebars from 'handlebars'
+
 const app = express()
 
 // #DONE:10 配置模板引擎 +server
